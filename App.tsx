@@ -1,6 +1,5 @@
 import React from 'react';
-import Navigation from './config/navigation';
-
+import Navigation from './src/config/navigation';
 export default function App() {
   return <Navigation />;
 }

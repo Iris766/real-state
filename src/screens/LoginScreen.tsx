@@ -19,7 +19,7 @@ export default function LoginScreen({ navigation }: { navigation: any }) {
           <StatusBar backgroundColor={'#ffff'} barStyle={'dark-content'} />
           <Text style={styles.welcome}>Welcome to</Text>
           <Text style={styles.heading2}>Sahib Real Estate and Builders</Text>
-          <Image source={require('../assets/login.png')} style={styles.img} />
+          <Image source={require('../../assets/login.png')} style={styles.img} />
           <TextInput placeholder="Email" style={styles.input} />
           <TextInput placeholder="Password" style={styles.input} secureTextEntry={true} />
           <TouchableOpacity

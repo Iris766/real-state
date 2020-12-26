@@ -7,7 +7,7 @@ export default function DrawerNav(props: any) {
   return (
     <View style={styles.drawer}>
       <View style={styles.profile}>
-        <Image source={require('../../assets/profile.png')} style={styles.avatar} />
+        <Image source={require('../../../assets/profile.png')} style={styles.avatar} />
         <Text style={styles.name}>Talha Shahid</Text>
       </View>
       <ScrollView>
