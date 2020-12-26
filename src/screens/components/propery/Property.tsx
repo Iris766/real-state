@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {
   Text,
   View,
@@ -9,20 +10,12 @@ import {
 } from 'react-native';
 
 interface Props {
-  id: string;
-  propertyName: string;
-  type: string;
-  isAvailable: string;
   navigation: any;
+  item: any;
 }
 
-export default function Property({
-  id,
-  propertyName,
-  type,
-  isAvailable,
-  navigation,
-}: Props) {
+export default function Property({ item, navigation }: Props) {
+  const { id, isAvailable, propertyName, type } = item;
   const availiability =
     isAvailable === 'Available'
       ? '#01DA0A'
@@ -33,6 +26,7 @@ export default function Property({
   const toDetailScreen = () => {
     navigation.navigate('Detail', {
       isAvailable,
+      item,
     });
   };
 

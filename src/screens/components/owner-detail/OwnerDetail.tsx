@@ -8,7 +8,7 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
-import { FontAwesome as Icon } from 'react-native-vector-icons/';
+import { FontAwesome as Icon } from 'react-native-vector-icons';
 
 interface Props {
   navigation: any;

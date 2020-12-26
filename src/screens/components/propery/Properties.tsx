@@ -14,7 +14,7 @@ export default function Properties({ navigation }: Props) {
         <FlatList
           data={data}
           renderItem={({ item }) => (
-            <Property {...item} key={item.id} navigation={navigation} />
+            <Property item={item} key={item.id} navigation={navigation} />
           )}
         />
       </SafeAreaView>
