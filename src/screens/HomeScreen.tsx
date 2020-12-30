@@ -8,7 +8,12 @@ import Properties from './components/propery/Properties';
 export default function HomeScreen({ navigation }: { navigation: any }) {
   return (
     <View style={styles.main}>
-      <Header navigation={navigation} iconName="search" title="Talha Shahid" />
+      <Header
+        navigation={navigation}
+        iconName="search"
+        title="Talha Shahid"
+        color="#097FA4"
+      />
       <SafeAreaView style={{ flex: 1 }}>
         <Properties navigation={navigation} />
       </SafeAreaView>

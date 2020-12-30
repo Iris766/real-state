@@ -1,16 +1,16 @@
-import React from 'react';
-import { Text, FlatList, StyleSheet, SafeAreaView } from 'react-native';
+import React, { useState } from 'react';
+import { Text, FlatList, StyleSheet, SafeAreaView, View } from 'react-native';
 import Property from './Property';
 import data from '../../../data/property';
+import { ScrollView } from 'react-native-gesture-handler';
 
 interface Props {
   navigation: any;
 }
 export default function Properties({ navigation }: Props) {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <View style={{ flex: 1 }}>
       <SafeAreaView style={{ flex: 1 }}>
-        <Text style={styles.text}>Recent Properties</Text>
         <FlatList
           data={data}
           renderItem={({ item }) => (
@@ -18,7 +18,7 @@ export default function Properties({ navigation }: Props) {
           )}
         />
       </SafeAreaView>
-    </SafeAreaView>
+    </View>
   );
 }
 

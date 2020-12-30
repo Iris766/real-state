@@ -3,10 +3,19 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import { StyleSheet, Text } from 'react-native';
 import { FontAwesome as Icon } from 'react-native-vector-icons/';
 
-export default function DrawerBtns({ icon, text }) {
+interface Props {
+  icon: string;
+  text: string;
+  navigation: any;
+}
+
+export default function DrawerBtns({ icon, text, navigation }: Props) {
   return (
     <React.Fragment>
-      <TouchableOpacity style={styles.links}>
+      <TouchableOpacity
+        style={styles.links}
+        onPress={() => navigation.navigate('AddProperty')}
+      >
         <Icon name={icon} size={23} color="#097FA4" />
         <Text style={styles.text}>{text}</Text>
       </TouchableOpacity>

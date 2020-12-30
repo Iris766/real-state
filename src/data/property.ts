@@ -16,7 +16,8 @@ export default [
     dc_dd_dx: "DD",
     demand: 48,
     dealer_client: "Mudassir Aban",
-    Notes: "All Notes will be here this is a test note lorem ipsum door mobile app thankyou."
+    Notes: "All Notes will be here this is a test note lorem ipsum door mobile app thankyou.",
+    residential: true,
   },
   {
     id: '2',
@@ -35,7 +36,8 @@ export default [
     dc_dd_dx: "DC",
     demand: 29,
     dealer_client: "Arjun kapoor",
-    Notes: "All Notes will be here this is a test note lorem ipsum door mobile app thankyou."
+    Notes: "All Notes will be here this is a test note lorem ipsum door mobile app thankyou.",
+    residential: true,
   },
   {
     id: '3',
@@ -54,7 +56,8 @@ export default [
     dc_dd_dx: "DX",
     demand: 87,
     dealer_client: "Shabbir Khan",
-    Notes: "All Notes will be here this is a test note lorem ipsum door mobile app thankyou."
+    Notes: "All Notes will be here this is a test note lorem ipsum door mobile app thankyou.",
+    residential: true,
   },
   {
     id: '4',
@@ -73,7 +76,8 @@ export default [
     dc_dd_dx: "DD",
     demand: 23,
     dealer_client: "Adnan Ansari",
-    Notes: "All Notes will be here this is a test note lorem ipsum door mobile app thankyou."
+    Notes: "All Notes will be here this is a test note lorem ipsum door mobile app thankyou.",
+    residential: false,
   },
   {
     id: '5',
@@ -92,6 +96,7 @@ export default [
     dc_dd_dx: "DC",
     demand: 42,
     dealer_client: "Anwar Maqsood",
-    Notes: "All Notes will be here this is a test note lorem ipsum door mobile app thankyou."
+    Notes: "All Notes will be here this is a test note lorem ipsum door mobile app thankyou.",
+    residential: false,
   },
 ];

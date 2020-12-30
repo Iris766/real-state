@@ -1,22 +1,24 @@
 import React from 'react';
 import { View, StyleSheet, TouchableOpacity, Text } from 'react-native';
 import { FontAwesome as Icon } from 'react-native-vector-icons/';
+import { Fontisto as FontistoIcon } from 'react-native-vector-icons/';
 
 interface Props {
   navigation: any;
   title: string;
   iconName: string;
+  color: string;
 }
 
-export default function HomeScreen({ navigation, title, iconName }: Props) {
+export default function HomeScreen({ navigation, title, iconName, color }: Props) {
   return (
     <View style={styles.headerWrapper}>
       <TouchableOpacity onPress={() => navigation.toggleDrawer()}>
-        <Icon name="bars" size={25} color="#097FA4" />
+        <Icon name="bars" size={25} color={color} />
       </TouchableOpacity>
       <Text style={styles.usrName}>{title}</Text>
       <TouchableOpacity>
-        <Icon name={iconName} size={25} color="#097FA4" />
+        <FontistoIcon name={iconName} size={25} color="#097FA4" />
       </TouchableOpacity>
     </View>
   );
@@ -27,6 +29,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     padding: 15,
+    paddingTop: 30,
     backgroundColor: '#fff',
     elevation: 4,
   },

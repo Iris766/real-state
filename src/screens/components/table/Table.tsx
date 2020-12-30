@@ -20,25 +20,30 @@ export default function Table({ item }: Props) {
       <Row colKey="DC/DD/DX" colValue={item.dc_dd_dx} />
       <Row colKey="Demand" colValue={item.demand} />
       <Row colKey="Dealer/Client" colValue={item.dealer_client} />
+      <View>
+        <Text
+          style={{
+            color: '#097FA4',
+            fontSize: 16,
+            fontWeight: 'bold',
+            paddingHorizontal: 15,
+          }}
+        >
+          Note
+        </Text>
+        <Text style={styles.note}>{item.Notes}</Text>
+      </View>
     </React.Fragment>
   );
 }
 
 const styles = StyleSheet.create({
-  row: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
+  note: {
     borderWidth: 1,
     borderColor: '#ddd',
     marginHorizontal: 15,
-    marginVertical: 6,
+    padding: 6,
     borderRadius: 5,
-  },
-  col: {
-    flex: 1,
-    borderColor: '#ddd',
-    borderRightWidth: 1,
-    padding: 5,
+    marginVertical: 5,
   },
 });

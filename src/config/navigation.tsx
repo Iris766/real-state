@@ -7,6 +7,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from '../screens/HomeScreen';
 import LoginScreen from '../screens/LoginScreen';
 import DetailScreen from '../screens/DetailScreen';
+import AddProperty from '../screens/AddProperty';
 // drawer
 import MyDrawerNav from './DrawerStyles/MyDrawerNav';
 
@@ -35,6 +36,7 @@ const Navigation = () => (
     <Drawer.Navigator drawerContent={(props) => <MyDrawerNav {...props} />}>
       <Drawer.Screen name="Login" component={LoginScreen} />
       <Drawer.Screen name="Home" component={HomeStackScreen} />
+      <Drawer.Screen name="AddProperty" component={AddProperty} />
     </Drawer.Navigator>
   </NavigationContainer>
 );

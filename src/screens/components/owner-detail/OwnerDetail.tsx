@@ -8,7 +8,7 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
-import { FontAwesome as Icon } from 'react-native-vector-icons';
+import { Foundation as Icon } from 'react-native-vector-icons';
 
 interface Props {
   navigation: any;
@@ -34,7 +34,7 @@ export default function DetailScreen({ navigation, isAvailable }: Props) {
             </View>
           </View>
           <View style={{ alignItems: 'center' }}>
-            <Icon name="money" size={25} color="#097FA4" />
+            <Icon name="pricetag-multiple" size={25} color="#097FA4" />
             <Text style={{ color: '#097FA4', textAlign: 'center' }}>Rs. 99 mill</Text>
             <TouchableOpacity
               style={{

@@ -21,7 +21,12 @@ export default function DetailScreen({ navigation, route }: Props) {
     <View>
       <ScrollView>
         <View>
-          <Header title="Property Detail" navigation={navigation} iconName="share-alt" />
+          <Header
+            title="Property Detail"
+            navigation={navigation}
+            iconName="share"
+            color="#097FA4"
+          />
           <Slider />
           <SafeAreaView>
             <OwnerDetail navigation={navigation} isAvailable={isAvailable} />
