@@ -8,6 +8,10 @@ import HomeScreen from '../screens/HomeScreen';
 import LoginScreen from '../screens/LoginScreen';
 import DetailScreen from '../screens/DetailScreen';
 import AddProperty from '../screens/AddProperty';
+import EditProfile from '../screens/EditProfile';
+import MySubmissions from '../screens/MySubmissions';
+import MarketTrend from '../screens/MarketTrend';
+import History from '../screens/History';
 // drawer
 import MyDrawerNav from './DrawerStyles/MyDrawerNav';
 
@@ -37,6 +41,10 @@ const Navigation = () => (
       <Drawer.Screen name="Login" component={LoginScreen} />
       <Drawer.Screen name="Home" component={HomeStackScreen} />
       <Drawer.Screen name="AddProperty" component={AddProperty} />
+      <Drawer.Screen name="EditProfile" component={EditProfile} />
+      <Drawer.Screen name="MySubmissions" component={MySubmissions} />
+      <Drawer.Screen name="MarketTrend" component={MarketTrend} />
+      <Drawer.Screen name="History" component={History} />
     </Drawer.Navigator>
   </NavigationContainer>
 );

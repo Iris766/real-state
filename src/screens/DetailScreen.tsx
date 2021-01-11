@@ -3,8 +3,7 @@ import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
 import Header from '../screens/components/header/Header';
 import Slider from './components/slider/Slider';
 import OwnerDetail from './components/owner-detail/OwnerDetail';
-import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
-import { color } from 'react-native-reanimated';
+import { ScrollView } from 'react-native-gesture-handler';
 import Table from './components/table/Table';
 
 interface Props {
@@ -13,6 +12,7 @@ interface Props {
   route: any;
   item: any;
 }
+
 export default function DetailScreen({ navigation, route }: Props) {
   const { isAvailable } = route.params.item;
   const { item } = route.params;
@@ -24,7 +24,7 @@ export default function DetailScreen({ navigation, route }: Props) {
           <Header
             title="Property Detail"
             navigation={navigation}
-            iconName="share"
+            iconName="share-2"
             color="#097FA4"
           />
           <Slider />

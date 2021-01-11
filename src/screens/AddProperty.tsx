@@ -1,6 +1,6 @@
 import React from 'react';
-import { Text, View, StyleSheet, TextInput } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Text, View, StyleSheet, TextInput, SafeAreaView } from 'react-native';
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 import Header from './components/header/Header';
 import { Entypo as Icon } from 'react-native-vector-icons';
 import { Fontisto as FontistoIcon } from 'react-native-vector-icons';
@@ -8,7 +8,7 @@ import { MaterialCommunityIcons } from 'react-native-vector-icons';
 
 export default function AddProperty({ navigation }) {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Header
         title="Add Property"
         navigation={navigation}
@@ -62,7 +62,24 @@ export default function AddProperty({ navigation }) {
           <TextInput placeholder="Inventory Holder Name" style={styles.input} />
         </View>
       </View>
-    </View>
+      <Text style={styles.text}>Add Keyword</Text>
+      <SafeAreaView>
+        <View style={styles.inputContainer}>
+          <TextInput multiline={true} numberOfLines={8} style={styles.input} />
+        </View>
+        <View style={styles.btns}>
+          <TouchableOpacity style={styles.btn}>
+            <Text style={{ color: '#097FA4' }}>Images</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.btn}>
+            <Text style={{ color: '#097FA4' }}>Map</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.btnSubmit}>
+            <Text style={{ color: '#fff' }}>Submit</Text>
+          </TouchableOpacity>
+        </View>
+      </SafeAreaView>
+    </ScrollView>
   );
 }
 
@@ -130,5 +147,27 @@ const styles = StyleSheet.create({
     paddingVertical: 1,
     paddingHorizontal: 5,
     borderRadius: 5,
+  },
+  btns: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginVertical: 10,
+  },
+  btn: {
+    borderWidth: 1.5,
+    paddingHorizontal: 10,
+    paddingVertical: 3,
+    alignItems: 'center',
+    width: 80,
+    borderRadius: 6,
+    borderColor: '#097FA4',
+  },
+  btnSubmit: {
+    backgroundColor: '#097FA4',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    alignItems: 'center',
+    width: 100,
+    borderRadius: 6,
   },
 });

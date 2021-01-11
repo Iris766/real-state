@@ -7,14 +7,15 @@ interface Props {
   icon: string;
   text: string;
   navigation: any;
+  ScreenName: any;
 }
 
-export default function DrawerBtns({ icon, text, navigation }: Props) {
+export default function DrawerBtns({ icon, text, navigation, ScreenName }: Props) {
   return (
     <React.Fragment>
       <TouchableOpacity
         style={styles.links}
-        onPress={() => navigation.navigate('AddProperty')}
+        onPress={() => navigation.navigate(ScreenName)}
       >
         <Icon name={icon} size={23} color="#097FA4" />
         <Text style={styles.text}>{text}</Text>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, ScrollView, StyleSheet, Dimensions } from 'react-native';
+import { View, Image, ScrollView, StyleSheet, Dimensions } from 'react-native';
 
 const { width } = Dimensions.get('window');
 
@@ -19,5 +19,6 @@ const styles = StyleSheet.create({
   imgCont: {
     height: 300,
     backgroundColor: 'lightblue',
+    flex: 1,
   },
 });

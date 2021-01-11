@@ -17,12 +17,42 @@ export default function DrawerNav({ navigation }: Props) {
       </View>
       <ScrollView>
         <SafeAreaView>
-          <DrawerBtns icon="home" text="Add Property" navigation={navigation} />
-          <DrawerBtns icon="id-badge" text="My Submissions" navigation={navigation} />
-          <DrawerBtns icon="signal" text="Market Trend" navigation={navigation} />
-          <DrawerBtns icon="history" text="History" navigation={navigation} />
-          <DrawerBtns icon="user-circle" text="Edit Profile" navigation={navigation} />
-          <DrawerBtns icon="sign-in" text="Log out" navigation={navigation} />
+          <DrawerBtns
+            ScreenName="AddProperty"
+            icon="home"
+            text="Add Property"
+            navigation={navigation}
+          />
+          <DrawerBtns
+            ScreenName="MySubmissions"
+            icon="id-badge"
+            text="My Submissions"
+            navigation={navigation}
+          />
+          <DrawerBtns
+            ScreenName="MarketTrend"
+            icon="signal"
+            text="Market Trend"
+            navigation={navigation}
+          />
+          <DrawerBtns
+            ScreenName="History"
+            icon="history"
+            text="History"
+            navigation={navigation}
+          />
+          <DrawerBtns
+            ScreenName="EditProfile"
+            icon="user-circle"
+            text="Edit Profile"
+            navigation={navigation}
+          />
+          <DrawerBtns
+            ScreenName="LoginScreen"
+            icon="sign-in"
+            text="Log out"
+            navigation={navigation}
+          />
         </SafeAreaView>
       </ScrollView>
     </View>

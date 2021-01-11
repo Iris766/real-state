@@ -1,7 +1,8 @@
-import React from 'react';
-import { View, StyleSheet, TouchableOpacity, Text } from 'react-native';
+import React, { useState } from 'react';
+import { View, StyleSheet, TouchableOpacity, Text, Alert } from 'react-native';
 import { FontAwesome as Icon } from 'react-native-vector-icons/';
-import { Fontisto as FontistoIcon } from 'react-native-vector-icons/';
+import { Feather as FeatherIcon } from 'react-native-vector-icons/';
+import SearchBar from './SearchBar';
 
 interface Props {
   navigation: any;
@@ -11,16 +12,30 @@ interface Props {
 }
 
 export default function HomeScreen({ navigation, title, iconName, color }: Props) {
+  const [showSearch, setShowSearch] = useState(false);
+
+  function onSearchPress() {
+    setShowSearch(!showSearch);
+    console.log(showSearch);
+  }
+
+  function onSharePress() {
+    Alert.alert('You want share the House Details');
+  }
+
   return (
-    <View style={styles.headerWrapper}>
-      <TouchableOpacity onPress={() => navigation.toggleDrawer()}>
-        <Icon name="bars" size={25} color={color} />
-      </TouchableOpacity>
-      <Text style={styles.usrName}>{title}</Text>
-      <TouchableOpacity>
-        <FontistoIcon name={iconName} size={25} color="#097FA4" />
-      </TouchableOpacity>
-    </View>
+    <React.Fragment>
+      <View style={styles.headerWrapper}>
+        <TouchableOpacity onPress={() => navigation.toggleDrawer()}>
+          <Icon name="bars" size={25} color={color} />
+        </TouchableOpacity>
+        <Text style={styles.usrName}>{title}</Text>
+        <TouchableOpacity onPress={iconName !== 'search' ? onSharePress : onSearchPress}>
+          <FeatherIcon name={iconName} size={25} color="#097FA4" />
+        </TouchableOpacity>
+      </View>
+      {showSearch ? null : <SearchBar />}
+    </React.Fragment>
   );
 }
 
