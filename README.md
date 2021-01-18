@@ -7,3 +7,6 @@
 - ``` expo start web ```
 
 <img src="screenshots/screen1.jpeg" width="200">
+<img src="screenshots/screen2.jpeg" width="200">
+<img src="screenshots/screen3.jpeg" width="200">
+<img src="screenshots/screen4.jpeg" width="200">
